@@ -7,10 +7,13 @@
     "dev": "tsx watch src/server.ts"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "@types/pg": "^8.23.1",
     "tsx": "^4.23.13",
     "typescript": "~6.0.3"
   }
