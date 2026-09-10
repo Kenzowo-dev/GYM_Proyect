@@ -13,8 +13,7 @@ function App() {
     <div className="app">
       <header className="navbar">
         <div className="logo">
-          <span className="logo-icon">GYM</span>
-          <span className="logo-text">FITNESS</span>
+          <img src="/src/assets/logo.png" alt="IRONFLEX" className="logo-image" />
         </div>
 
         <nav className="nav-links">
@@ -122,13 +121,15 @@ function App() {
               </p>
 
               <div className="address">
-                <strong>Dirección</strong>
-                <span>Dirección del gimnasio</span>
+                <strong>Mundo Fitness Palermo</strong>
+                 <span>Av. César Vallejo 690, Trujillo 13006</span>
               </div>
 
-              <button className="btn btn-map">
-                Abrir en Google Maps
-              </button>
+              <a href="https://maps.app.goo.gl/StUWA2QRRnUzpuGN6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-map"> Abrir en Google Maps
+              </a>
             </div>
 
             <div className="map-container">
@@ -144,7 +145,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>© 2026 GYM FITNESS. Todos los derechos reservados.</p>
+        <p>© 2026 IRONFLEX. Todos los derechos reservados.</p>
       </footer>
     </div>
   )

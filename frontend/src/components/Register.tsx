@@ -67,8 +67,7 @@ function Register({ onBack }: RegisterProps) {
       <section className="register-page">
         <div className="register-card success-card">
           <div className="register-logo">
-            <span className="logo-icon">GYM</span>
-            <span className="logo-text">FITNESS</span>
+            <img src="/src/assets/logo.png" alt="IRONFLEX" className="logo-image" />
           </div>
 
           <div className="success-icon">✓</div>
@@ -77,7 +76,7 @@ function Register({ onBack }: RegisterProps) {
 
           <p>
             Tu cuenta ha sido creada correctamente. Ya puedes comenzar a
-            disfrutar de tu experiencia en GYM FITNESS.
+            disfrutar de tu experiencia en IRONFLEX.
           </p>
 
           <button type="button" className="btn btn-start" onClick={onBack}>
@@ -92,8 +91,7 @@ function Register({ onBack }: RegisterProps) {
     <section className="register-page">
       <div className="register-card">
         <div className="register-logo">
-          <span className="logo-icon">GYM</span>
-          <span className="logo-text">FITNESS</span>
+          <img src="/src/assets/logo.png" alt="IRONFLEX" className="logo-image" />
         </div>
 
         <div className="register-header">

@@ -87,6 +87,17 @@ button {
   font-weight: 800;
   letter-spacing: 2px;
 }
+.logo-image {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.register-logo .logo-image {
+  width: 180px;
+  height: auto;
+  margin-bottom: 10px;
+}
 
 /* NAV LINKS */
 
