@@ -12,7 +12,7 @@ function LoginInput({
   placeholder,
 }: LoginInputProps) {
   return (
-    <div>
+    <div className="login-field">
       <label htmlFor={id}>
         {label}
       </label>

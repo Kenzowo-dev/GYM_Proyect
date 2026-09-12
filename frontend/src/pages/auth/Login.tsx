@@ -1,31 +1,22 @@
+import LoginForm from '../../componentes/auth/LoginForm'
+import '../../styles/auth/Login.css'
+
 function Login() {
   return (
-    <div>
-      <h1>Mundo Fitness</h1>
+    <main className="login-page">
+      <section className="login-container">
+        <h1 className="login-title">
+          Mundo Fitness
+        </h1>
 
-      <h2>Iniciar sesión</h2>
+        <h2 className="login-subtitle">
+          Iniciar sesión
+        </h2>
 
-      <form>
-        <div>
-          <label htmlFor="email">Correo electrónico</label>
-
-          <input type="email" id="email" placeholder="Ingresa tu correo" />
-        </div>
-
-        <div>
-          <label htmlFor="password">Contraseña</label>
-
-          <input
-            type="password"
-            id="password"
-            placeholder="Ingresa tu contraseña"
-          />
-        </div>
-
-        <button type="submit">Ingresar</button>
-      </form>
-    </div>
-  );
+        <LoginForm />
+      </section>
+    </main>
+  )
 }
 
-export default Login;
+export default Login

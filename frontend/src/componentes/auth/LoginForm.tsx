@@ -1,8 +1,9 @@
 import LoginInput from './LoginInput'
+import '../../styles/auth/LoginForm.css'
 
 function LoginForm() {
   return (
-    <form>
+    <form className="login-form">
       <LoginInput
         label="Correo electrónico"
         type="email"
@@ -17,7 +18,10 @@ function LoginForm() {
         placeholder="Ingresa tu contraseña"
       />
 
-      <button type="submit">
+      <button
+        type="submit"
+        className="login-button"
+      >
         Ingresar
       </button>
     </form>
