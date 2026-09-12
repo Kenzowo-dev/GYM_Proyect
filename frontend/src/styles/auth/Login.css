@@ -33,3 +33,19 @@
     font-size: 18px;
     font-weight: 600;
 }
+
+.login-back-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #111111;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-back-button:hover {
+    color: #e30613;
+}
