@@ -1,12 +1,19 @@
+
 import { useState } from 'react'
 import Register from './components/Register'
+import Login from './pages/auth/Login'
 import './App.css'
 
 function App() {
   const [showRegister, setShowRegister] = useState(false)
+  const [showLogin, setShowLogin] = useState(false)
 
   if (showRegister) {
     return <Register onBack={() => setShowRegister(false)} />
+  }
+
+  if (showLogin) {
+    return <Login onBack={() => setShowLogin(false)} />
   }
 
   return (
@@ -23,7 +30,10 @@ function App() {
         </nav>
 
         <div className="auth-buttons">
-          <button className="btn btn-login">
+          <button
+            className="btn btn-login"
+            onClick={() => setShowLogin(true)}
+          >
             Iniciar sesión
           </button>
 
@@ -122,13 +132,16 @@ function App() {
 
               <div className="address">
                 <strong>Mundo Fitness Palermo</strong>
-                 <span>Av. César Vallejo 690, Trujillo 13006</span>
+                <span>Av. César Vallejo 690, Trujillo 13006</span>
               </div>
 
-              <a href="https://maps.app.goo.gl/StUWA2QRRnUzpuGN6"
+              <a
+                href="https://maps.app.goo.gl/StUWA2QRRnUzpuGN6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-map"> Abrir en Google Maps
+                className="btn btn-map"
+              >
+                Abrir en Google Maps
               </a>
             </div>
 
