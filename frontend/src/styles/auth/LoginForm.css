@@ -60,3 +60,29 @@
 .login-button:active {
     transform: translateY(0);
 }
+
+.login-input-container {
+    position: relative;
+    width: 100%;
+}
+
+.login-input-container input {
+    padding-right: 85px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #e30613;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.password-toggle:hover {
+    color: #b80510;
+}
