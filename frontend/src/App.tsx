@@ -1,26 +1,18 @@
-
-import { useState } from 'react'
+import { Link, Route, Routes } from 'react-router-dom'
 import Register from './components/Register'
 import Login from './pages/auth/Login'
 import './App.css'
 
-function App() {
-  const [showRegister, setShowRegister] = useState(false)
-  const [showLogin, setShowLogin] = useState(false)
-
-  if (showRegister) {
-    return <Register onBack={() => setShowRegister(false)} />
-  }
-
-  if (showLogin) {
-    return <Login onBack={() => setShowLogin(false)} />
-  }
-
+function LandingPage() {
   return (
     <div className="app">
       <header className="navbar">
         <div className="logo">
-          <img src="/src/assets/logo.png" alt="IRONFLEX" className="logo-image" />
+          <img
+            src="/src/assets/Logo.png"
+            alt="Mundo Fitness"
+            className="logo-image"
+          />
         </div>
 
         <nav className="nav-links">
@@ -30,19 +22,13 @@ function App() {
         </nav>
 
         <div className="auth-buttons">
-          <button
-            className="btn btn-login"
-            onClick={() => setShowLogin(true)}
-          >
+          <Link to="/login" className="btn btn-login">
             Iniciar sesión
-          </button>
+          </Link>
 
-          <button
-            className="btn btn-register"
-            onClick={() => setShowRegister(true)}
-          >
+          <Link to="/registro" className="btn btn-register">
             Registrarse
-          </button>
+          </Link>
         </div>
       </header>
 
@@ -158,9 +144,19 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>© 2026 IRONFLEX. Todos los derechos reservados.</p>
+        <p>© 2026 Mundo Fitness. Todos los derechos reservados.</p>
       </footer>
     </div>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/registro" element={<Register />} />
+    </Routes>
   )
 }
 

@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import type { ChangeEvent, FormEvent } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-interface RegisterProps {
-  onBack: () => void
-}
+function Register() {
+  const navigate = useNavigate()
 
-function Register({ onBack }: RegisterProps) {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -67,7 +66,11 @@ function Register({ onBack }: RegisterProps) {
       <section className="register-page">
         <div className="register-card success-card">
           <div className="register-logo">
-            <img src="/src/assets/logo.png" alt="IRONFLEX" className="logo-image" />
+            <img
+              src="/src/assets/Logo.png"
+              alt="Mundo Fitness"
+              className="logo-image"
+            />
           </div>
 
           <div className="success-icon">✓</div>
@@ -76,10 +79,14 @@ function Register({ onBack }: RegisterProps) {
 
           <p>
             Tu cuenta ha sido creada correctamente. Ya puedes comenzar a
-            disfrutar de tu experiencia en IRONFLEX.
+            disfrutar de tu experiencia en Mundo Fitness.
           </p>
 
-          <button type="button" className="btn btn-start" onClick={onBack}>
+          <button
+            type="button"
+            className="btn btn-start"
+            onClick={() => navigate('/')}
+          >
             Volver al inicio
           </button>
         </div>
@@ -91,7 +98,11 @@ function Register({ onBack }: RegisterProps) {
     <section className="register-page">
       <div className="register-card">
         <div className="register-logo">
-          <img src="/src/assets/logo.png" alt="IRONFLEX" className="logo-image" />
+          <img
+            src="/src/assets/Logo.png"
+            alt="Mundo Fitness"
+            className="logo-image"
+          />
         </div>
 
         <div className="register-header">
@@ -141,7 +152,9 @@ function Register({ onBack }: RegisterProps) {
             </div>
 
             <div className="form-group">
-              <label htmlFor="confirmPassword">Confirmar contraseña</label>
+              <label htmlFor="confirmPassword">
+                Confirmar contraseña
+              </label>
               <input
                 id="confirmPassword"
                 name="confirmPassword"
@@ -200,7 +213,11 @@ function Register({ onBack }: RegisterProps) {
           </button>
         </form>
 
-        <button type="button" className="back-button" onClick={onBack}>
+        <button
+          type="button"
+          className="back-button"
+          onClick={() => navigate('/')}
+        >
           ← Volver al inicio
         </button>
       </div>

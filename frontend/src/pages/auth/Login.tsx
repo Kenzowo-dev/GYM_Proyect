@@ -1,11 +1,10 @@
+import { useNavigate } from 'react-router-dom'
 import LoginForm from '../../componentes/auth/LoginForm'
 import '../../styles/auth/Login.css'
 
-interface LoginProps {
-  onBack: () => void
-}
+function Login() {
+  const navigate = useNavigate()
 
-function Login({ onBack }: LoginProps) {
   return (
     <main className="login-page">
       <section className="login-container">
@@ -22,7 +21,7 @@ function Login({ onBack }: LoginProps) {
         <button
           type="button"
           className="login-back-button"
-          onClick={onBack}
+          onClick={() => navigate('/')}
         >
           ← Volver al inicio
         </button>
