@@ -1,89 +1,69 @@
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
+    text-align: left;
 }
 
-.login-field {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.login-field label {
+.input-label {
+    display: block;
+    color: #ffffff;
     font-size: 14px;
-    font-weight: 700;
-    color: #111111;
+    font-weight: 600;
+    margin-bottom: 6px;
 }
 
-.login-field input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 13px 14px;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
-    background-color: #ffffff;
-    color: #111111;
-    font-size: 15px;
-    outline: none;
-    transition: all 0.2s ease;
-}
-
-.login-field input::placeholder {
-    color: #999999;
-}
-
-.login-field input:focus {
-    border-color: #e30613;
-    box-shadow: 0 0 0 2px rgba(227, 6, 19, 0.1);
-}
-
-.login-button,
-button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #ffcc00;
-    color: #0b0b0b;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 10px;
-}
-
-.login-button:hover,
-button[type="submit"]:hover {
-    background-color: #e6b800;
-}
-
-.login-button:active {
-    transform: translateY(0);
-}
-
-.login-input-container {
+.input-wrapper {
     position: relative;
+}
+
+.login-input {
     width: 100%;
+    padding: 12px 14px;
+    background-color: #262626;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
 }
 
-.login-input-container input {
-    padding-right: 85px;
+.login-input::placeholder {
+    color: #737373;
 }
 
-.password-toggle {
+.login-input:focus {
+    border-color: #facc15;
+}
+
+.toggle-password-btn {
     position: absolute;
-    right: 10px;
+    right: 12px;
     top: 50%;
     transform: translateY(-50%);
+    background: none;
     border: none;
-    background: transparent;
-    color: #e30613;
+    color: #facc15;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
 }
 
-.password-toggle:hover {
-    color: #b80510;
+.btn-ingresar {
+    width: 100%;
+    padding: 12px;
+    background-color: #facc15;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-ingresar:hover {
+    background-color: #eab308;
 }
