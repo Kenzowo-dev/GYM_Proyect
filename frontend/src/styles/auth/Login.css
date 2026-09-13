@@ -21,23 +21,29 @@
     color: #ffffff;
     font-size: 26px;
     font-weight: 800;
-    margin-bottom: 4px;
+    margin: 0 0 6px 0;
+    text-align: center;
 }
 
 .login-subtitle {
-    color: #facc15;
+    color: #ffcc00;
     font-size: 15px;
     font-weight: 600;
-    margin-bottom: 24px;
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+.login-footer {
+    margin-top: 20px;
+    text-align: center;
 }
 
 .back-link {
-    display: inline-block;
-    margin: 20px auto 0;
     color: #a3a3a3;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 .back-link:hover {
