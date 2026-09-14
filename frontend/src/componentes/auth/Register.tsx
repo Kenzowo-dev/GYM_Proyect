@@ -6,7 +6,8 @@ function Register() {
   const navigate = useNavigate()
 
   const [formData, setFormData] = useState({
-    fullName: '',
+    firstName: '',
+    lastName: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -35,7 +36,8 @@ function Register() {
     event.preventDefault()
 
     if (
-      !formData.fullName ||
+      !formData.firstName ||
+      !formData.lastName ||
       !formData.email ||
       !formData.password ||
       !formData.confirmPassword ||
@@ -114,16 +116,30 @@ function Register() {
         </div>
 
         <form className="register-form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="fullName">Nombre completo</label>
-            <input
-              id="fullName"
-              name="fullName"
-              type="text"
-              placeholder="Ingresa tu nombre completo"
-              value={formData.fullName}
-              onChange={handleChange}
-            />
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="firstName">Nombres</label>
+              <input
+                id="firstName"
+                name="firstName"
+                type="text"
+                placeholder="Ingresa tus nombres"
+                value={formData.firstName}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="lastName">Apellidos</label>
+              <input
+                id="lastName"
+                name="lastName"
+                type="text"
+                placeholder="Ingresa tus apellidos"
+                value={formData.lastName}
+                onChange={handleChange}
+              />
+            </div>
           </div>
 
           <div className="form-group">

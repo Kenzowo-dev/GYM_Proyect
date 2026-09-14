@@ -1,5 +1,5 @@
 import { Link, Route, Routes } from 'react-router-dom'
-import Register from './components/Register'
+import Register from './componentes/auth/Register'
 import Login from './pages/auth/Login'
 import './App.css'
 
@@ -8,7 +8,7 @@ function LandingPage() {
     <div className="app">
       <header className="navbar">
         <div className="logo">
-          <img
+          <img  
             src="/src/assets/Logo.png"
             alt="Mundo Fitness"
             className="logo-image"
