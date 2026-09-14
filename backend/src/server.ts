@@ -1,8 +1,15 @@
 import express from "express";
+import cors from "cors";
+import authRoutes from "./routes/auth.routes.js";
 
 const app = express();
 
 const PORT = 3000;
+
+app.use(cors());
+app.use(express.json());
+
+app.use("/api/auth", authRoutes);
 
 app.get("/api/health", (_req, res) => {
   res.json({
@@ -11,5 +18,5 @@ app.get("/api/health", (_req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
+  console.log(`Servidor ejecutandose en http://localhost:${PORT}`);
 });
